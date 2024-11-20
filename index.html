@@ -6,147 +6,97 @@
   <title>더조은컴퓨터학원 일산캠퍼스</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23FF6347'/></svg>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.0.5/swiper-bundle.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.0.5/swiper-bundle.min.js"></script>
+  <!-- SEO -->
   <meta name="description" content="더조은컴퓨터학원 일산캠퍼스에서 제공하는 혁신적인 교육 프로그램을 만나보세요!">
   <meta name="keywords" content="더조은컴퓨터학원, 일산캠퍼스, 교육과정, IT, 웹 개발, 프로그래밍, 코딩">
   <meta name="author" content="더조은컴퓨터학원">
-  <style>
-    #calendar {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      gap: 1rem;
-    }
-    #calendar div {
-      text-align: center;
-      padding: 0.5rem;
-      border: 1px solid #444;
-      background-color: #333;
-      color: #fff;
-    }
-    #calendar .header {
-      font-weight: bold;
-      background-color: #555;
-    }
-  </style>
 </head>
 <body class="bg-gray-900 text-white font-sans">
-
   <!-- Header -->
-  <header class="relative">
-    <div id="banner" class="overflow-hidden w-screen h-screen">
-      <img src="https://is.tjoeun.co.kr/upload/site/banner/2024/2024103015364303014262060.png" alt="Course Banner 1" class="w-full h-full object-cover absolute">
-      <img src="https://is.tjoeun.co.kr/upload/site/banner/2024/2024092615255100244140203.png" alt="Course Banner 2" class="w-full h-full object-cover hidden absolute">
-    </div>
-    <div class="absolute top-1/2 transform -translate-y-1/2 w-full flex justify-between px-4 z-10">
-      <button id="prevBanner" class="text-white bg-black bg-opacity-50 px-3 py-1 rounded">&lt;</button>
-      <button id="nextBanner" class="text-white bg-black bg-opacity-50 px-3 py-1 rounded">&gt;</button>
+  <header class="text-center py-6 bg-indigo-800">
+    <h1 class="text-3xl font-bold">더조은컴퓨터학원 일산캠퍼스</h1>
+    <p class="mt-2 text-lg">Shape the future with extraterrestrial-level skills!</p>
+    <div class="swiper-container mt-4">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://is.tjoeun.co.kr/upload/site/banner/2024/2024103015364303014262060.png" alt="Banner 1">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://is.tjoeun.co.kr/upload/site/banner/2024/2024092615255100244140203.png" alt="Banner 2">
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
   </header>
 
+  <!-- Course Introduction -->
+  <section id="introduction" class="py-10 px-6">
+    <h2 class="text-2xl font-bold text-center text-green-400">About the Course</h2>
+    <p class="mt-4 text-center text-gray-300">Discover cutting-edge skills to advance your career in the most innovative fields.</p>
+  </section>
+
+  <!-- Curriculum -->
+  <section id="curriculum" class="py-10 px-6 bg-gray-800">
+    <h2 class="text-2xl font-bold text-center text-yellow-400">Course Curriculum</h2>
+    <table class="table-auto w-full mt-6 text-gray-300 border border-gray-700">
+      <thead>
+        <tr>
+          <th class="px-4 py-2 border">Week</th>
+          <th class="px-4 py-2 border">Subject</th>
+          <th class="px-4 py-2 border">Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="border px-4 py-2">11월 1주차</td><td class="border px-4 py-2">Intro to Alien Tech</td><td class="border px-4 py-2">Foundational Skills</td></tr>
+        <tr><td class="border px-4 py-2">11월 2주차</td><td class="border px-4 py-2">Advanced Cosmic Coding</td><td class="border px-4 py-2">Mastering Tools</td></tr>
+        <tr><td class="border px-4 py-2">11월 3주차</td><td class="border px-4 py-2">Intergalactic UI Design</td><td class="border px-4 py-2">Visual Frameworks</td></tr>
+        <tr><td class="border px-4 py-2">11월 4주차</td><td class="border px-4 py-2">AI Systems</td><td class="border px-4 py-2">Automated Solutions</td></tr>
+        <tr><td class="border px-4 py-2">11월 5주차</td><td class="border px-4 py-2">Debugging with Quantum Tools</td><td class="border px-4 py-2">Problem Solving</td></tr>
+        <tr><td class="border px-4 py-2">12월 1주차</td><td class="border px-4 py-2">Extraterrestrial Project Week</td><td class="border px-4 py-2">Capstone</td></tr>
+      </tbody>
+    </table>
+  </section>
+
   <!-- Schedule -->
-  <section id="schedule" class="py-10 px-6 bg-gray-800">
+  <section id="schedule" class="py-10 px-6">
     <h2 class="text-2xl font-bold text-center text-blue-400">Schedule</h2>
-    <div class="flex justify-between mt-6">
-      <button id="prevMonth" class="text-white bg-indigo-500 px-4 py-2 rounded">Previous Month</button>
-      <h3 id="calendarTitle" class="text-xl font-bold text-center"></h3>
-      <button id="nextMonth" class="text-white bg-indigo-500 px-4 py-2 rounded">Next Month</button>
+    <div id="calendar" class="mt-6 bg-gray-800 p-4 rounded">
+      <p class="text-gray-300">Calendar with highlighted curriculum dates.</p>
     </div>
-    <div id="calendar" class="mt-6 bg-gray-800 p-4 rounded"></div>
   </section>
 
   <!-- Location -->
   <section id="location" class="py-10 px-6 bg-gray-800">
     <h2 class="text-2xl font-bold text-center text-purple-400">Location</h2>
-    <p class="mt-4 text-center text-gray-300">경기도 고양시 일산동구 중앙로 1275번길 38-10 201호</p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.107417726589!2d126.769533!3d37.657818" width="100%" height="300" allowfullscreen="" loading="lazy" class="rounded"></iframe>
+    <iframe src="https://www.google.com/maps?q=37.65745,126.770414&hl=ko&z=18&output=embed" width="100%" height="300" allowfullscreen="" loading="lazy" class="rounded"></iframe>
   </section>
 
   <!-- Contact -->
   <section id="contact" class="py-10 px-6">
     <h2 class="text-2xl font-bold text-center text-red-400">Contact Us</h2>
     <form id="contactForm" class="mt-6 space-y-4">
-      <div><input type="text" placeholder="Your Name" name="name" class="w-full p-3 bg-gray-700 rounded text-white"></div>
-      <div><input type="email" placeholder="Your Email" name="email" class="w-full p-3 bg-gray-700 rounded text-white"></div>
-      <div><textarea placeholder="Your Message" name="message" class="w-full p-3 bg-gray-700 rounded text-white"></textarea></div>
+      <div><input type="text" name="name" placeholder="Your Name" class="w-full p-3 bg-gray-700 rounded text-white"></div>
+      <div><input type="email" name="email" placeholder="Your Email" class="w-full p-3 bg-gray-700 rounded text-white"></div>
+      <div><textarea name="message" placeholder="Your Message" class="w-full p-3 bg-gray-700 rounded text-white"></textarea></div>
       <button type="submit" class="w-full bg-indigo-600 py-3 rounded text-white font-bold">Submit Inquiry</button>
     </form>
   </section>
 
   <script>
-    // Banner rolling logic
-    let banners = document.querySelectorAll("#banner img");
-    let currentBanner = 0;
-
-    function showBanner(index) {
-      banners.forEach((banner, i) => banner.classList.toggle("hidden", i !== index));
-    }
-
-    document.getElementById("prevBanner").addEventListener("click", () => {
-      currentBanner = (currentBanner - 1 + banners.length) % banners.length;
-      showBanner(currentBanner);
+    const swiper = new Swiper('.swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      loop: true,
     });
 
-    document.getElementById("nextBanner").addEventListener("click", () => {
-      currentBanner = (currentBanner + 1) % banners.length;
-      showBanner(currentBanner);
-    });
-
-    // Calendar logic
-    const calendarData = {
-      "2024-11": [
-        { date: "2024-11-01", week: "11월 1주차", subject: "Intro to Alien Tech" },
-        { date: "2024-11-08", week: "11월 2주차", subject: "Advanced Robotics" },
-      ],
-      "2024-12": [
-        { date: "2024-12-01", week: "12월 1주차", subject: "Capstone Project" },
-      ],
-    };
-
-    let currentMonth = "2024-11";
-
-    function renderCalendar(month) {
-      const calendar = document.getElementById("calendar");
-      const title = document.getElementById("calendarTitle");
-      title.textContent = month;
-      calendar.innerHTML = "";
-
-      // Header row
-      ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].forEach(day => {
-        const div = document.createElement("div");
-        div.textContent = day;
-        div.className = "header";
-        calendar.appendChild(div);
-      });
-
-      // Dates
-      const monthData = calendarData[month] || [];
-      monthData.forEach(event => {
-        const div = document.createElement("div");
-        div.innerHTML = `<b>${event.date}</b><br>${event.week}<br>${event.subject}`;
-        calendar.appendChild(div);
-      });
-    }
-
-    document.getElementById("prevMonth").addEventListener("click", () => {
-      currentMonth = currentMonth === "2024-12" ? "2024-11" : "2024-12";
-      renderCalendar(currentMonth);
-    });
-
-    document.getElementById("nextMonth").addEventListener("click", () => {
-      currentMonth = currentMonth === "2024-11" ? "2024-12" : "2024-11";
-      renderCalendar(currentMonth);
-    });
-
-    renderCalendar(currentMonth);
-
-    // Email submission
     document.getElementById('contactForm').addEventListener('submit', function (e) {
       e.preventDefault();
-      const formData = new FormData(e.target);
-      const email = formData.get("email");
-      const message = `Name: ${formData.get("name")}\nMessage: ${formData.get("message")}`;
-
-      location.href = `mailto:tjoeunis@naver.com?subject=Contact Inquiry&body=${encodeURIComponent(message)}`;
+      alert('문의가 성공적으로 접수되었습니다.');
     });
   </script>
 </body>

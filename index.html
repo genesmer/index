@@ -1,199 +1,60 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>더조은컴퓨터학원 일산캠퍼스</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23FF6347'/></svg>">
-  <meta name="description" content="더조은컴퓨터학원 일산캠퍼스에서 제공하는 혁신적인 교육 프로그램을 만나보세요!">
-  <meta name="keywords" content="더조은컴퓨터학원, 일산캠퍼스, 교육과정, IT, 웹 개발, 프로그래밍, 코딩">
-  <meta name="author" content="더조은컴퓨터학원">
-  <style>
-    /* Styling for Course Curriculum */
-    #curriculum table {
-      background-color: #2d3748;
-      border-collapse: collapse;
-      border: 1px solid #4a5568;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-    #curriculum th, #curriculum td {
-      border: 1px solid #4a5568;
-      padding: 10px;
-      text-align: center;
-      color: #e2e8f0;
-    }
-    #curriculum th {
-      background-color: #4a5568;
-      font-weight: bold;
-    }
-    #curriculum tbody tr:nth-child(odd) {
-      background-color: #374151;
-    }
-
-    /* Styling for Schedule Calendar */
-    #calendar {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      gap: 0.5rem;
-      padding: 1rem;
-      background-color: #2d3748;
-      border-radius: 8px;
-    }
-    #calendar .header {
-      font-weight: bold;
-      color: #fbbf24;
-      text-align: center;
-      padding: 0.5rem 0;
-      background-color: #4a5568;
-      border-radius: 4px;
-    }
-    #calendar .day {
-      background-color: #374151;
-      color: #e2e8f0;
-      text-align: center;
-      padding: 1rem;
-      border-radius: 4px;
-      position: relative;
-    }
-    #calendar .day .event {
-      margin-top: 0.5rem;
-      padding: 0.3rem;
-      background-color: #fbbf24;
-      color: #000;
-      font-size: 0.75rem;
-      border-radius: 4px;
-    }
-  </style>
-</head>
-<body class="bg-gray-900 text-white font-sans">
-  <!-- Header -->
-  <header class="text-center py-6 bg-indigo-800">
-    <h1 class="text-3xl font-bold">더조은컴퓨터학원 일산캠퍼스</h1>
-    <p class="mt-2 text-lg">Shape the future with extraterrestrial-level skills!</p>
-  </header>
-
-  <!-- Course Curriculum -->
-  <section id="curriculum" class="py-10 px-6 bg-gray-800">
-    <h2 class="text-2xl font-bold text-center text-yellow-400">Course Curriculum</h2>
-    <table class="table-auto w-full mt-6 rounded">
-      <thead>
-        <tr>
-          <th>Week</th>
-          <th>Subject</th>
-          <th>Details</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>11월 1주차</td>
-          <td>Intro to Alien Tech</td>
-          <td>Foundational Skills</td>
-        </tr>
-        <tr>
-          <td>11월 2주차</td>
-          <td>Advanced Robotics</td>
-          <td>Hands-on Training</td>
-        </tr>
-        <tr>
-          <td>11월 3주차</td>
-          <td>Interstellar Networks</td>
-          <td>Building Systems</td>
-        </tr>
-        <tr>
-          <td>11월 4주차</td>
-          <td>Quantum Coding</td>
-          <td>Theory & Practice</td>
-        </tr>
-        <tr>
-          <td>12월 1주차</td>
-          <td>Capstone Project</td>
-          <td>Project Development</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <!-- Schedule -->
-  <section id="schedule" class="py-10 px-6 bg-gray-800">
-    <h2 class="text-2xl font-bold text-center text-blue-400">Schedule</h2>
-    <div class="flex justify-between mt-6">
-      <button id="prevMonth" class="text-white bg-indigo-500 px-4 py-2 rounded">Previous Month</button>
-      <h3 id="currentMonth" class="text-xl font-bold text-center"></h3>
-      <button id="nextMonth" class="text-white bg-indigo-500 px-4 py-2 rounded">Next Month</button>
+<!-- Updated Course Curriculum Section -->
+<section id="curriculum" class="py-10 px-6 bg-gray-800">
+  <h2 class="text-2xl font-bold text-center text-yellow-400 mb-6">Course Curriculum</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Week Cards -->
+    <div class="bg-gray-700 p-4 rounded shadow">
+      <h3 class="text-xl font-bold text-yellow-400">Week 1</h3>
+      <p class="mt-2 text-gray-300">Subject: <span class="text-white">Intro to Alien Tech</span></p>
+      <p class="mt-1 text-gray-400">Details: Foundational Skills</p>
     </div>
-    <div id="calendar" class="mt-6"></div>
-  </section>
+    <div class="bg-gray-700 p-4 rounded shadow">
+      <h3 class="text-xl font-bold text-yellow-400">Week 2</h3>
+      <p class="mt-2 text-gray-300">Subject: <span class="text-white">Advanced Robotics</span></p>
+      <p class="mt-1 text-gray-400">Details: Hands-on Training</p>
+    </div>
+    <div class="bg-gray-700 p-4 rounded shadow">
+      <h3 class="text-xl font-bold text-yellow-400">Week 3</h3>
+      <p class="mt-2 text-gray-300">Subject: <span class="text-white">Interstellar Networks</span></p>
+      <p class="mt-1 text-gray-400">Details: Building Systems</p>
+    </div>
+    <div class="bg-gray-700 p-4 rounded shadow">
+      <h3 class="text-xl font-bold text-yellow-400">Week 4</h3>
+      <p class="mt-2 text-gray-300">Subject: <span class="text-white">Quantum Coding</span></p>
+      <p class="mt-1 text-gray-400">Details: Theory & Practice</p>
+    </div>
+    <div class="bg-gray-700 p-4 rounded shadow">
+      <h3 class="text-xl font-bold text-yellow-400">Week 5</h3>
+      <p class="mt-2 text-gray-300">Subject: <span class="text-white">Capstone Project</span></p>
+      <p class="mt-1 text-gray-400">Details: Project Development</p>
+    </div>
+  </div>
+</section>
 
-  <!-- Script for Calendar -->
-  <script>
-    const calendarElement = document.getElementById("calendar");
-    const currentMonthElement = document.getElementById("currentMonth");
-    const schedule = [
-      { date: "2024-11-01", week: "11월 1주차", subject: "Intro to Alien Tech" },
-      { date: "2024-11-08", week: "11월 2주차", subject: "Advanced Robotics" },
-      { date: "2024-11-15", week: "11월 3주차", subject: "Interstellar Networks" },
-      { date: "2024-11-22", week: "11월 4주차", subject: "Quantum Coding" },
-      { date: "2024-12-01", week: "12월 1주차", subject: "Capstone Project" },
-    ];
-
-    let currentDate = new Date();
-
-    function renderCalendar(year, month) {
-      calendarElement.innerHTML = "";
-      const firstDay = new Date(year, month, 1);
-      const lastDay = new Date(year, month + 1, 0);
-      const daysInMonth = lastDay.getDate();
-      const startDay = firstDay.getDay();
-
-      currentMonthElement.textContent = `${year}년 ${month + 1}월`;
-
-      // Weekday headers
-      ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].forEach(day => {
-        const header = document.createElement("div");
-        header.textContent = day;
-        header.className = "header";
-        calendarElement.appendChild(header);
-      });
-
-      // Calendar days
-      for (let i = 0; i < startDay; i++) {
-        const emptyCell = document.createElement("div");
-        calendarElement.appendChild(emptyCell);
-      }
-
-      for (let date = 1; date <= daysInMonth; date++) {
-        const dayCell = document.createElement("div");
-        dayCell.className = "day";
-        dayCell.textContent = date;
-
-        const fullDate = `${year}-${String(month + 1).padStart(2, "0")}-${String(date).padStart(2, "0")}`;
-        const event = schedule.find(event => event.date === fullDate);
-
-        if (event) {
-          const eventDiv = document.createElement("div");
-          eventDiv.className = "event";
-          eventDiv.textContent = event.subject;
-          dayCell.appendChild(eventDiv);
-        }
-
-        calendarElement.appendChild(dayCell);
-      }
-    }
-
-    document.getElementById("prevMonth").addEventListener("click", () => {
-      currentDate.setMonth(currentDate.getMonth() - 1);
-      renderCalendar(currentDate.getFullYear(), currentDate.getMonth());
-    });
-
-    document.getElementById("nextMonth").addEventListener("click", () => {
-      currentDate.setMonth(currentDate.getMonth() + 1);
-      renderCalendar(currentDate.getFullYear(), currentDate.getMonth());
-    });
-
-    renderCalendar(currentDate.getFullYear(), currentDate.getMonth());
-  </script>
-</body>
-</html>
+<!-- Updated Schedule Section -->
+<section id="schedule" class="py-10 px-6 bg-gray-900">
+  <h2 class="text-2xl font-bold text-center text-blue-400 mb-6">Schedule</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Week Cards for Schedule -->
+    <div class="bg-gray-700 p-4 rounded shadow">
+      <h3 class="text-lg font-bold text-blue-400">Week 1 (Nov 1st - Nov 7th)</h3>
+      <p class="mt-2 text-gray-300">Subject: Intro to Alien Tech</p>
+    </div>
+    <div class="bg-gray-700 p-4 rounded shadow">
+      <h3 class="text-lg font-bold text-blue-400">Week 2 (Nov 8th - Nov 14th)</h3>
+      <p class="mt-2 text-gray-300">Subject: Advanced Robotics</p>
+    </div>
+    <div class="bg-gray-700 p-4 rounded shadow">
+      <h3 class="text-lg font-bold text-blue-400">Week 3 (Nov 15th - Nov 21st)</h3>
+      <p class="mt-2 text-gray-300">Subject: Interstellar Networks</p>
+    </div>
+    <div class="bg-gray-700 p-4 rounded shadow">
+      <h3 class="text-lg font-bold text-blue-400">Week 4 (Nov 22nd - Nov 28th)</h3>
+      <p class="mt-2 text-gray-300">Subject: Quantum Coding</p>
+    </div>
+    <div class="bg-gray-700 p-4 rounded shadow">
+      <h3 class="text-lg font-bold text-blue-400">Week 5 (Dec 1st - Dec 7th)</h3>
+      <p class="mt-2 text-gray-300">Subject: Capstone Project</p>
+    </div>
+  </div>
+</section>

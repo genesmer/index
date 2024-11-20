@@ -10,70 +10,215 @@
   <meta name="description" content="더조은컴퓨터학원 일산캠퍼스에서 제공하는 혁신적인 교육 프로그램을 만나보세요!">
   <meta name="keywords" content="더조은컴퓨터학원, 일산캠퍼스, 교육과정, IT, 웹 개발, 프로그래밍, 코딩">
   <meta name="author" content="더조은컴퓨터학원">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
 <body class="bg-gray-900 text-white font-sans">
-
   <!-- Header -->
   <header class="text-center py-6 bg-indigo-800">
     <h1 class="text-3xl font-bold">더조은컴퓨터학원 일산캠퍼스</h1>
     <p class="mt-2 text-lg">Shape the future with extraterrestrial-level skills!</p>
+    <div class="relative mx-auto w-full max-w-screen-lg">
+      <div id="banner" class="overflow-hidden rounded">
+        <picture>
+          <source media="(min-width: 768px)" srcset="https://is.tjoeun.co.kr/upload/site/banner/2024/2024103015364303014262060.png">
+          <source media="(max-width: 767px)" srcset="https://is.tjoeun.co.kr/upload/site/banner/2024/2024092615255100244140203.png">
+          <img src="https://is.tjoeun.co.kr/upload/site/banner/2024/2024103015364303014262060.png" alt="Course Banner" class="w-full">
+        </picture>
+      </div>
+      <div class="absolute top-1/2 transform -translate-y-1/2 w-full flex justify-between px-4">
+        <button id="prevBanner" class="text-white bg-black bg-opacity-50 px-3 py-1 rounded">&lt;</button>
+        <button id="nextBanner" class="text-white bg-black bg-opacity-50 px-3 py-1 rounded">&gt;</button>
+      </div>
+    </div>
   </header>
 
-  <!-- Course Curriculum -->
-  <section id="curriculum" class="py-10 px-6 bg-gray-800">
-    <h2 class="text-2xl font-bold text-center text-yellow-400 mb-6">Course Curriculum</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="bg-gray-700 p-4 rounded shadow">
-        <h3 class="text-xl font-bold text-yellow-400">Week 1</h3>
-        <p class="mt-2 text-gray-300">Subject: <span class="text-white">Intro to Alien Tech</span></p>
-        <p class="mt-1 text-gray-400">Details: Foundational Skills</p>
-      </div>
-      <div class="bg-gray-700 p-4 rounded shadow">
-        <h3 class="text-xl font-bold text-yellow-400">Week 2</h3>
-        <p class="mt-2 text-gray-300">Subject: <span class="text-white">Advanced Robotics</span></p>
-        <p class="mt-1 text-gray-400">Details: Hands-on Training</p>
-      </div>
-      <div class="bg-gray-700 p-4 rounded shadow">
-        <h3 class="text-xl font-bold text-yellow-400">Week 3</h3>
-        <p class="mt-2 text-gray-300">Subject: <span class="text-white">Interstellar Networks</span></p>
-        <p class="mt-1 text-gray-400">Details: Building Systems</p>
-      </div>
-      <div class="bg-gray-700 p-4 rounded shadow">
-        <h3 class="text-xl font-bold text-yellow-400">Week 4</h3>
-        <p class="mt-2 text-gray-300">Subject: <span class="text-white">Quantum Coding</span></p>
-        <p class="mt-1 text-gray-400">Details: Theory & Practice</p>
-      </div>
-      <div class="bg-gray-700 p-4 rounded shadow">
-        <h3 class="text-xl font-bold text-yellow-400">Week 5</h3>
-        <p class="mt-2 text-gray-300">Subject: <span class="text-white">Capstone Project</span></p>
-        <p class="mt-1 text-gray-400">Details: Project Development</p>
-      </div>
+<!-- Updated Course Curriculum Section -->
+<section id="curriculum" class="py-10 px-6 bg-gray-800">
+  <h2 class="text-2xl font-bold text-center text-yellow-400 mb-6">Course Curriculum</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Week Cards -->
+    <div class="bg-gray-700 p-4 rounded shadow">
+      <h3 class="text-xl font-bold text-yellow-400">Week 1</h3>
+      <p class="mt-2 text-gray-300">Subject: <span class="text-white">Intro to Alien Tech</span></p>
+      <p class="mt-1 text-gray-400">Details: Foundational Skills</p>
     </div>
+    <div class="bg-gray-700 p-4 rounded shadow">
+      <h3 class="text-xl font-bold text-yellow-400">Week 2</h3>
+      <p class="mt-2 text-gray-300">Subject: <span class="text-white">Advanced Robotics</span></p>
+      <p class="mt-1 text-gray-400">Details: Hands-on Training</p>
+    </div>
+    <div class="bg-gray-700 p-4 rounded shadow">
+      <h3 class="text-xl font-bold text-yellow-400">Week 3</h3>
+      <p class="mt-2 text-gray-300">Subject: <span class="text-white">Interstellar Networks</span></p>
+      <p class="mt-1 text-gray-400">Details: Building Systems</p>
+    </div>
+    <div class="bg-gray-700 p-4 rounded shadow">
+      <h3 class="text-xl font-bold text-yellow-400">Week 4</h3>
+      <p class="mt-2 text-gray-300">Subject: <span class="text-white">Quantum Coding</span></p>
+      <p class="mt-1 text-gray-400">Details: Theory & Practice</p>
+    </div>
+    <div class="bg-gray-700 p-4 rounded shadow">
+      <h3 class="text-xl font-bold text-yellow-400">Week 5</h3>
+      <p class="mt-2 text-gray-300">Subject: <span class="text-white">Capstone Project</span></p>
+      <p class="mt-1 text-gray-400">Details: Project Development</p>
+    </div>
+  </div>
+</section>
+
+<!-- Updated Schedule Section -->
+<section id="schedule" class="py-10 px-6 bg-gray-900">
+  <h2 class="text-2xl font-bold text-center text-blue-400 mb-6">Schedule</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Week Cards for Schedule -->
+    <div class="bg-gray-700 p-4 rounded shadow">
+      <h3 class="text-lg font-bold text-blue-400">Week 1 (Nov 1st - Nov 7th)</h3>
+      <p class="mt-2 text-gray-300">Subject: Intro to Alien Tech</p>
+    </div>
+    <div class="bg-gray-700 p-4 rounded shadow">
+      <h3 class="text-lg font-bold text-blue-400">Week 2 (Nov 8th - Nov 14th)</h3>
+      <p class="mt-2 text-gray-300">Subject: Advanced Robotics</p>
+    </div>
+    <div class="bg-gray-700 p-4 rounded shadow">
+      <h3 class="text-lg font-bold text-blue-400">Week 3 (Nov 15th - Nov 21st)</h3>
+      <p class="mt-2 text-gray-300">Subject: Interstellar Networks</p>
+    </div>
+    <div class="bg-gray-700 p-4 rounded shadow">
+      <h3 class="text-lg font-bold text-blue-400">Week 4 (Nov 22nd - Nov 28th)</h3>
+      <p class="mt-2 text-gray-300">Subject: Quantum Coding</p>
+    </div>
+    <div class="bg-gray-700 p-4 rounded shadow">
+      <h3 class="text-lg font-bold text-blue-400">Week 5 (Dec 1st - Dec 7th)</h3>
+      <p class="mt-2 text-gray-300">Subject: Capstone Project</p>
+    </div>
+  </div>
+</section>
+
+  <!-- Location -->
+  <section id="location" class="py-10 px-6 bg-gray-800">
+    <h2 class="text-2xl font-bold text-center text-purple-400">Location</h2>
+    <p class="mt-4 text-center text-gray-300">경기도 고양시 일산동구 중앙로 1275번길 38-10 201호</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3158.8330149331654!2d126.77041399999999!3d37.657450000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9d9a6ccede5b%3A0x8f0e5c5f9e0b0a1a!2z642U7KGw7J2A7Lu07ZOo7YSw7ZWZ7JuQIOydvOyCsOy6oO2NvOyKpA!5e0!3m2!1sko!2skr!4v1637137201234!5m2!1sko!2skr" width="100%" height="300" allowfullscreen="" loading="lazy" class="rounded"></iframe>
   </section>
 
-  <!-- Schedule -->
-  <section id="schedule" class="py-10 px-6 bg-gray-900">
-    <h2 class="text-2xl font-bold text-center text-blue-400 mb-6">Schedule</h2>
-    <div class="grid grid-cols-7 gap-4 text-center text-white">
-      <!-- Days of the week -->
-      <div class="font-bold text-indigo-400">Sun</div>
-      <div class="font-bold text-indigo-400">Mon</div>
-      <div class="font-bold text-indigo-400">Tue</div>
-      <div class="font-bold text-indigo-400">Wed</div>
-      <div class="font-bold text-indigo-400">Thu</div>
-      <div class="font-bold text-indigo-400">Fri</div>
-      <div class="font-bold text-indigo-400">Sat</div>
-      <!-- Calendar content -->
-      <div></div><div></div><div>1</div><div class="bg-indigo-600 p-2 rounded">2</div><div class="bg-indigo-600 p-2 rounded">3</div><div class="bg-indigo-600 p-2 rounded">4</div><div>5</div>
-      <div>6</div><div class="bg-indigo-600 p-2 rounded">7</div><div>8</div><div class="bg-indigo-600 p-2 rounded">9</div><div>10</div><div>11</div><div>12</div>
-      <div>13</div><div class="bg-indigo-600 p-2 rounded">14</div><div>15</div><div>16</div><div>17</div><div class="bg-indigo-600 p-2 rounded">18</div><div>19</div>
-      <div>20</div><div class="bg-indigo-600 p-2 rounded">21</div><div>22</div><div class="bg-indigo-600 p-2 rounded">23</div><div>24</div><div>25</div><div>26</div>
-      <div>27</div><div>28</div><div>29</div><div class="bg-indigo-600 p-2 rounded">30</div><div></div><div></div><div></div>
-    </div>
+<!-- Contact -->
+  <section id="contact" class="py-10 px-6">
+    <h2 class="text-2xl font-bold text-center text-red-400">Contact Us</h2>
+    <form id="contactForm" class="mt-6 space-y-4">
+      <div><input type="text" placeholder="Your Name" name="name" class="w-full p-3 bg-gray-700 rounded text-white"></div>
+      <div><input type="email" placeholder="Your Email" name="email" class="w-full p-3 bg-gray-700 rounded text-white"></div>
+      <div><textarea placeholder="Your Message" name="message" class="w-full p-3 bg-gray-700 rounded text-white"></textarea></div>
+      <button type="submit" class="w-full bg-indigo-600 py-3 rounded text-white font-bold">Submit Inquiry</button>
+    </form>
   </section>
 
-  <footer class="text-center py-6 bg-gray-800">
+  <!-- Footer -->
+  <footer class="text-center py-6 bg-gray-900">
     <p>Follow us: <a href="https://www.instagram.com/tjoeunis" target="_blank" class="text-pink-500 mx-2"><i class="fab fa-instagram"></i></a></p>
   </footer>
+
+ <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    // Banner rolling logic
+    let banners = document.querySelectorAll("#banner picture");
+    let currentBanner = 0;
+
+    function showBanner(index) {
+      banners.forEach((banner, i) => banner.style.display = i === index ? "block" : "none");
+    }
+
+    document.getElementById("prevBanner").addEventListener("click", () => {
+      currentBanner = (currentBanner - 1 + banners.length) % banners.length;
+      showBanner(currentBanner);
+    });
+
+    document.getElementById("nextBanner").addEventListener("click", () => {
+      currentBanner = (currentBanner + 1) % banners.length;
+      showBanner(currentBanner);
+    });
+
+    // Calendar logic
+    const calendarBody = document.getElementById("calendarBody");
+    const currentMonthElement = document.getElementById("currentMonth");
+    let currentDate = new Date();
+
+    const courseSchedule = [
+      { date: new Date(2024, 10, 1), subject: "Intro to Alien Tech" },
+      { date: new Date(2024, 10, 8), subject: "Advanced Robotics" },
+      { date: new Date(2024, 10, 15), subject: "Interstellar Networks" },
+      { date: new Date(2024, 10, 22), subject: "Quantum Coding" },
+      { date: new Date(2024, 11, 1), subject: "Capstone Project" }
+    ];
+
+    function generateCalendar(year, month) {
+      const firstDay = new Date(year, month, 1);
+      const lastDay = new Date(year, month + 1, 0);
+      const daysInMonth = lastDay.getDate();
+      const startingDay = firstDay.getDay();
+
+      currentMonthElement.textContent = `${year}년 ${month + 1}월`;
+
+      let date = 1;
+      let calendarHTML = "";
+
+      for (let i = 0; i < 6; i++) {
+        let row = "<tr>";
+        for (let j = 0; j < 7; j++) {
+          if (i === 0 && j < startingDay) {
+            row += "<td></td>";
+          } else if (date > daysInMonth) {
+            break;
+          } else {
+            const currentDate = new Date(year, month, date);
+            const scheduleForDay = courseSchedule.find(schedule => 
+              schedule.date.getFullYear() === currentDate.getFullYear() &&
+              schedule.date.getMonth() === currentDate.getMonth() &&
+              schedule.date.getDate() === currentDate.getDate()
+            );
+
+            if (scheduleForDay) {
+              row += `<td class="border p-1 text-center bg-indigo-600" title="${scheduleForDay.subject}">${date}</td>`;
+            } else {
+              row += `<td class="border p-1 text-center">${date}</td>`;
+            }
+            date++;
+          }
+        }
+        row += "</tr>";
+        calendarHTML += row;
+      }
+
+      calendarBody.innerHTML = calendarHTML;
+    }
+
+    generateCalendar(currentDate.getFullYear(), currentDate.getMonth());
+
+    document.getElementById("prevMonth").addEventListener("click", () => {
+      currentDate.setMonth(currentDate.getMonth() - 1);
+      generateCalendar(currentDate.getFullYear(), currentDate.getMonth());
+    });
+
+    document.getElementById("nextMonth").addEventListener("click", () => {
+      currentDate.setMonth(currentDate.getMonth() + 1);
+      generateCalendar(currentDate.getFullYear(), currentDate.getMonth());
+    });
+
+    // EmailJS form submission
+    (function() {
+      emailjs.init("genesmer"); // Replace with your EmailJS user ID
+    })();
+
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      emailjs.sendForm('tjoeunis', 'tjoeunis', this)
+        .then(function() {
+          console.log('SUCCESS!');
+          alert('문의가 성공적으로 접수되었습니다. 이메일을 확인해주세요.');
+        }, function(error) {
+          console.log('FAILED...', error);
+          alert('문의 접수에 실패했습니다. 다시 시도해주세요.');
+        });
+    });
+  </script>
 </body>
 </html>

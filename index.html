@@ -32,66 +32,58 @@
     </div>
   </header>
 
-<!-- Updated Course Curriculum Section -->
-<section id="curriculum" class="py-10 px-6 bg-gray-800">
-  <h2 class="text-2xl font-bold text-center text-yellow-400 mb-6">Course Curriculum</h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    <!-- Week Cards -->
-    <div class="bg-gray-700 p-4 rounded shadow">
-      <h3 class="text-xl font-bold text-yellow-400">Week 1</h3>
-      <p class="mt-2 text-gray-300">Subject: <span class="text-white">Intro to Alien Tech</span></p>
-      <p class="mt-1 text-gray-400">Details: Foundational Skills</p>
-    </div>
-    <div class="bg-gray-700 p-4 rounded shadow">
-      <h3 class="text-xl font-bold text-yellow-400">Week 2</h3>
-      <p class="mt-2 text-gray-300">Subject: <span class="text-white">Advanced Robotics</span></p>
-      <p class="mt-1 text-gray-400">Details: Hands-on Training</p>
-    </div>
-    <div class="bg-gray-700 p-4 rounded shadow">
-      <h3 class="text-xl font-bold text-yellow-400">Week 3</h3>
-      <p class="mt-2 text-gray-300">Subject: <span class="text-white">Interstellar Networks</span></p>
-      <p class="mt-1 text-gray-400">Details: Building Systems</p>
-    </div>
-    <div class="bg-gray-700 p-4 rounded shadow">
-      <h3 class="text-xl font-bold text-yellow-400">Week 4</h3>
-      <p class="mt-2 text-gray-300">Subject: <span class="text-white">Quantum Coding</span></p>
-      <p class="mt-1 text-gray-400">Details: Theory & Practice</p>
-    </div>
-    <div class="bg-gray-700 p-4 rounded shadow">
-      <h3 class="text-xl font-bold text-yellow-400">Week 5</h3>
-      <p class="mt-2 text-gray-300">Subject: <span class="text-white">Capstone Project</span></p>
-      <p class="mt-1 text-gray-400">Details: Project Development</p>
-    </div>
-  </div>
-</section>
+  <!-- Course Introduction -->
+  <section id="introduction" class="py-10 px-6">
+    <h2 class="text-2xl font-bold text-center text-green-400">About the Course</h2>
+    <p class="mt-4 text-center text-gray-300">Discover cutting-edge skills to advance your career in the most innovative fields.</p>
+  </section>
 
-<!-- Updated Schedule Section -->
-<section id="schedule" class="py-10 px-6 bg-gray-900">
-  <h2 class="text-2xl font-bold text-center text-blue-400 mb-6">Schedule</h2>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    <!-- Week Cards for Schedule -->
-    <div class="bg-gray-700 p-4 rounded shadow">
-      <h3 class="text-lg font-bold text-blue-400">Week 1 (Nov 1st - Nov 7th)</h3>
-      <p class="mt-2 text-gray-300">Subject: Intro to Alien Tech</p>
+  <!-- Curriculum -->
+  <section id="curriculum" class="py-10 px-6 bg-gray-800">
+    <h2 class="text-2xl font-bold text-center text-yellow-400">Course Curriculum</h2>
+    <table class="table-auto w-full mt-6 text-gray-300 border border-gray-700">
+      <thead>
+        <tr>
+          <th class="px-4 py-2 border">Week</th>
+          <th class="px-4 py-2 border">Subject</th>
+          <th class="px-4 py-2 border">Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="border px-4 py-2">11월 1주차</td><td class="border px-4 py-2">Intro to Alien Tech</td><td class="border px-4 py-2">Foundational Skills</td></tr>
+        <tr><td class="border px-4 py-2">11월 2주차</td><td class="border px-4 py-2">Advanced Robotics</td><td class="border px-4 py-2">Hands-on Training</td></tr>
+        <tr><td class="border px-4 py-2">11월 3주차</td><td class="border px-4 py-2">Interstellar Networks</td><td class="border px-4 py-2">Building Systems</td></tr>
+        <tr><td class="border px-4 py-2">11월 4주차</td><td class="border px-4 py-2">Quantum Coding</td><td class="border px-4 py-2">Theory & Practice</td></tr>
+        <tr><td class="border px-4 py-2">12월 1주차</td><td class="border px-4 py-2">Capstone Project</td><td class="border px-4 py-2">Project Development</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Schedule -->
+  <section id="schedule" class="py-10 px-6">
+    <h2 class="text-2xl font-bold text-center text-blue-400">Schedule</h2>
+    <div id="calendar" class="mt-6 bg-gray-800 p-4 rounded">
+      <div class="flex justify-between items-center mb-4">
+        <button id="prevMonth" class="text-white bg-indigo-600 px-3 py-1 rounded">&lt;</button>
+        <h3 id="currentMonth" class="text-xl font-bold"></h3>
+        <button id="nextMonth" class="text-white bg-indigo-600 px-3 py-1 rounded">&gt;</button>
+      </div>
+      <table class="w-full">
+        <thead>
+          <tr>
+            <th class="py-2">Sun</th>
+            <th class="py-2">Mon</th>
+            <th class="py-2">Tue</th>
+            <th class="py-2">Wed</th>
+            <th class="py-2">Thu</th>
+            <th class="py-2">Fri</th>
+            <th class="py-2">Sat</th>
+          </tr>
+        </thead>
+        <tbody id="calendarBody"></tbody>
+      </table>
     </div>
-    <div class="bg-gray-700 p-4 rounded shadow">
-      <h3 class="text-lg font-bold text-blue-400">Week 2 (Nov 8th - Nov 14th)</h3>
-      <p class="mt-2 text-gray-300">Subject: Advanced Robotics</p>
-    </div>
-    <div class="bg-gray-700 p-4 rounded shadow">
-      <h3 class="text-lg font-bold text-blue-400">Week 3 (Nov 15th - Nov 21st)</h3>
-      <p class="mt-2 text-gray-300">Subject: Interstellar Networks</p>
-    </div>
-    <div class="bg-gray-700 p-4 rounded shadow">
-      <h3 class="text-lg font-bold text-blue-400">Week 4 (Nov 22nd - Nov 28th)</h3>
-      <p class="mt-2 text-gray-300">Subject: Quantum Coding</p>
-    </div>
-    <div class="bg-gray-700 p-4 rounded shadow">
-      <h3 class="text-lg font-bold text-blue-400">Week 5 (Dec 1st - Dec 7th)</h3>
-      <p class="mt-2 text-gray-300">Subject: Capstone Project</p>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- Location -->
   <section id="location" class="py-10 px-6 bg-gray-800">
